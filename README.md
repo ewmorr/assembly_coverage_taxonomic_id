@@ -1,6 +1,6 @@
-Workflow for getting assembly coverage and assigning taxonomic information to abyss assembly or spades assembly
-Final collated output can be used as input to R to create "blob plots" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3843372/) and other plots to visually examine assembly quality.
-Coverage file from samtools is useful for other downstream applications (e.g. estimating coverage of predicted mRNAs)
+Workflow for getting assembly coverage and assigning taxonomic information to abyss assembly or spades assembly.
+The final collated output can be used as input to R to create "blob plots" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3843372/) and other plots to visually examine assembly quality.
+The coverage file from samtools is useful for other downstream applications (e.g. estimating coverage of predicted mRNAs).
 
 
 get lengths of contigs or scaffolds
