@@ -50,7 +50,7 @@ taxdump_blast_parse.pl contigs.blast.txt taxdump/nodes.dmp taxdump/names.dmp sca
 ```
 
 Collate taxonomy, coverage, length, GC content for input to R.
-If is spades assembly instead of abyss assembly remove '--abyss' flag at end of command.
+If is spades assembly instead of abyss assembly remove `--abyss` flag at end of command.
 This flag is required to process sequence IDs of abyss scaffolds which are not processed properly by bwa/samtools workflow (i.e. part of sequence header is removed).
 
 ```
