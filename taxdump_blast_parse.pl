@@ -125,7 +125,7 @@ if($bls[1] =~ /\D+/) #If species ID is not digits skip to next
 		$killWhile++;
 		if($killWhile >= 50) # Change this value to allow more or less while loop iterations
 			{
-			print "\nThere is a problem with the taxonomy information for $bls[0]. Taxonomic lineage has greater than 50 entries.\nPlease review blast output or increase the allowed number of iterations in this script (L98). Exiting without completing parsing.\n\n";
+			print "\nThere is a problem with the taxonomy information for $bls[0]. Taxonomic lineage has greater than 50 entries.\nPlease review blast output or increase the allowed number of iterations in this script (L126). Exiting without completing parsing.\n\n";
 			exit;
 			}
 
