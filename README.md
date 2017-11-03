@@ -29,7 +29,7 @@ samtools index sorted_mapped.bam
 samtools depth -a sorted_mapped.bam > coverage.txt
 ```
 
-Calculate average coverage per contig (or scaffold)
+calculate average coverage per contig (or scaffold)
 
 ```
 coverage_per_contig_samtools.pl coverage.txt > coverage_by_sequence.txt
