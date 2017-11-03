@@ -35,23 +35,23 @@ Calculate average coverage per contig (or scaffold)
 coverage_per_contig_samtools.pl coverage.txt > coverage_by_sequence.txt
 ```
 
-blast against NCBI for taxonmic ID
+blast against NCBI for taxonmic ID.
 nt should be path to nt db
 
 ```
 blastn -task megablast -query contigs.fa -db nt -outfmt '6 qseqid staxids bitscore std stitle' -culling_limit 5 -num_threads 24 -evalue 1e-25 -out contigs.blast.txt
 ```
 
-Parse blast for taxonomic info using NCBI taxdump
-taxdump databases at https://www.ncbi.nlm.nih.gov/guide/taxonomy/
+Parse blast for taxonomic info using NCBI taxdump.
+Taxdump databases at https://www.ncbi.nlm.nih.gov/guide/taxonomy/
 
 ```
 taxdump_blast_parse.pl contigs.blast.txt taxdump/nodes.dmp taxdump/names.dmp scaffolds.blast_parsed.txt
 ```
 
-Collate taxonomy, coverage, length, GC content for input to R
-If is spades assembly instead of abyss assembly remove --abyss flag at end of command
-This flag is required to process sequence IDs of abyss scaffolds which are not processed properly by bwa/samtools workflow (i.e. part of sequence header is removed)
+Collate taxonomy, coverage, length, GC content for input to R.
+If is spades assembly instead of abyss assembly remove '--abyss' flag at end of command.
+This flag is required to process sequence IDs of abyss scaffolds which are not processed properly by bwa/samtools workflow (i.e. part of sequence header is removed).
 
 ```
 combine_taxonomy_coverage_len_GC.pl contigs.blast_parsed.txt coverage_by_sequence.txt contigs.fa contigs_tax_cov_len_gc.txt --abyss
